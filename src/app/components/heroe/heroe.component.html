@@ -1,0 +1,20 @@
+<div class="row animated fadeIn ">
+  <div class="col-md-4">
+    <img [src]="heroe.img" class="img-fluid" [alt]="heroe.nombre" />
+  </div>
+  <div class="col-md-8">
+    <h3 class="">{{ heroe.nombre }} <small>({{ heroe.aparicion | date: 'yyyy' }})</small></h3>
+    <hr class="my-1">
+    <p class="mt-2">
+      {{ heroe.bio }}
+    </p>
+    <div class="text-center">
+      <img class="img-fluid" style="width: 200px" src="assets/img/{{ heroe.casa | lowercase }}.png" alt="" />
+    </div>
+  </div>
+</div>
+<div class="row mt-5">
+  <div class="col-lg-12">
+    <a [routerLink]="['/heroes']"  class="btn btn-outline-secondary btn-block">Regresar</a>
+  </div>
+</div>
