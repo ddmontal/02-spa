@@ -23,4 +23,8 @@ export class FiltroHeroesComponent implements OnInit {
       this.termino = params['termino'];
     });
   }
+
+  verHeroe(idx: number) {
+    this.router.navigate(['/heroe', idx]);
+  }
 }
