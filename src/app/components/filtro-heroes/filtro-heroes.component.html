@@ -1,15 +1,8 @@
-<h1 class="animate fadeIn">Búsqeda de héroes: "{{  termino }}"</h1>
+<h1 class="animate fadeIn">Búsqeda de héroes: "{{ termino }}"</h1>
 <hr />
 <div class="card-columns animate fadeIn fast">
-  <div class="card" *ngFor="let heroe of heroes; let i = index">
-    <img class="card-img-top" [src]="heroe.img" [alt]="heroe.nombre" />
-    <div class="card-body">
-      <h4 class="card-title">{{ heroe.nombre }}</h4>
-      <p class="card-text">{{ heroe.bio }}</p>
-    </div>
-    <div class="card-footer text-right">
-      <small class="text-muted ">Aparición: {{ heroe.aparicion |date: 'dd/MM/yyyy'   }}</small>
-    </div>
+  <div *ngFor="let heroe of heroes; let i = index">
+    <app-heroe-tarjeta [heroe]="heroe" [index]="i"></app-heroe-tarjeta>
   </div>
 </div>
 
